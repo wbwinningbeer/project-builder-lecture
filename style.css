@@ -4,6 +4,7 @@
     --text-color: #333;
     --button-bg: #4CAF50;
     --button-text: white;
+    --secondary-button-bg: #2196F3;
     --number-bg: #ddd;
     --number-text: #000;
     --input-bg: #fff;
@@ -16,6 +17,7 @@ body.dark-mode {
     --text-color: #f0f0f0;
     --button-bg: #45a049;
     --button-text: #fff;
+    --secondary-button-bg: #1e88e5;
     --number-bg: #444;
     --number-text: #fff;
     --input-bg: #3d3d3d;
@@ -40,7 +42,7 @@ body {
     flex-direction: column;
     gap: 30px;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .container {
@@ -64,7 +66,7 @@ body {
     z-index: 100;
 }
 
-button#generate, .submit-btn {
+button#generate, .submit-btn, .secondary-btn {
     padding: 12px 24px;
     font-size: 16px;
     cursor: pointer;
@@ -73,6 +75,10 @@ button#generate, .submit-btn {
     background-color: var(--button-bg);
     color: var(--button-text);
     transition: background-color 0.3s;
+}
+
+.secondary-btn {
+    background-color: var(--secondary-button-bg);
 }
 
 #numbers {
@@ -92,33 +98,64 @@ button#generate, .submit-btn {
     background-color: var(--number-bg);
     color: var(--number-text);
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Contact Form Styles */
-.contact-container h2 {
-    margin-top: 0;
+/* Animal Face Test Styles */
+.upload-area {
+    margin: 20px 0;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.image-preview img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
+.loader {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.result-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+
+#label-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bar-bg {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: var(--secondary-button-bg);
+    transition: width 0.5s ease-out;
+}
+
+/* Contact & Comment Styles */
+.form-group { margin-bottom: 15px; }
 .form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--input-border);
-    border-radius: 5px;
-    background-color: var(--input-bg);
-    color: var(--text-color);
+    width: 100%; padding: 10px; border: 1px solid var(--input-border);
+    border-radius: 5px; background-color: var(--input-bg); color: var(--text-color);
     box-sizing: border-box;
 }
-
-.form-group textarea {
-    height: 100px;
-    resize: vertical;
-}
-
-.submit-btn {
-    width: 100%;
-}
+.form-group textarea { height: 100px; resize: vertical; }
+.submit-btn { width: 100%; }
