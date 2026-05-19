@@ -6,6 +6,8 @@
     --button-text: white;
     --number-bg: #ddd;
     --number-text: #000;
+    --input-bg: #fff;
+    --input-border: #ccc;
 }
 
 body.dark-mode {
@@ -16,6 +18,8 @@ body.dark-mode {
     --button-text: #fff;
     --number-bg: #444;
     --number-text: #fff;
+    --input-bg: #3d3d3d;
+    --input-border: #555;
 }
 
 body {
@@ -28,18 +32,27 @@ body {
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
     margin: 0;
+    padding: 20px;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .container {
     text-align: center;
-    padding: 40px;
+    padding: 30px;
     background-color: var(--container-bg);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .theme-toggle {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     padding: 8px 16px;
@@ -48,17 +61,17 @@ body {
     border-radius: 20px;
     background: transparent;
     color: var(--text-color);
+    z-index: 100;
 }
 
-button#generate {
-    padding: 10px 20px;
+button#generate, .submit-btn {
+    padding: 12px 24px;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     background-color: var(--button-bg);
     color: var(--button-text);
-    margin-bottom: 20px;
     transition: background-color 0.3s;
 }
 
@@ -66,6 +79,7 @@ button#generate {
     display: flex;
     gap: 10px;
     justify-content: center;
+    margin-top: 20px;
 }
 
 #numbers span {
@@ -79,4 +93,32 @@ button#generate {
     color: var(--number-text);
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
+}
+
+/* Contact Form Styles */
+.contact-container h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
 }
