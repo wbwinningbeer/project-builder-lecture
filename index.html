@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Animal Face Test & Lotto Generator</title>
+    <title>AI Animal Face Test & Lotto Generator | Fun AI Tools</title>
+    <meta name="description" content="Discover your animal face type with our AI test and generate lucky lotto numbers. High-quality AI tools for fun and entertainment.">
     <meta name="google-adsense-account" content="ca-pub-1922136929973589">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1922136929973589"
      crossorigin="anonymous"></script>
@@ -13,45 +14,67 @@
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body>
-    <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
-    <div class="main-wrapper">
-        <div class="container">
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">Fun AI Tools</div>
+            <ul class="nav-links">
+                <li><a href="#animal-test">Animal Test</a></li>
+                <li><a href="#lotto-gen">Lotto Gen</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
+        </nav>
+    </header>
+
+    <main class="main-wrapper">
+        <section id="animal-test" class="container">
             <h1>AI Animal Face Test</h1>
-            <p>Upload a photo to see if you look more like a Dog or a Cat!</p>
+            <p class="section-desc">Ever wondered which animal you resemble the most? Our advanced AI analyzes your facial features to find your animal counterpart. Simply upload a clear photo of your face to get started!</p>
             
             <div id="upload-area" class="upload-area">
                 <input type="file" id="image-input" accept="image/*" hidden>
-                <button id="upload-btn" class="secondary-btn">Upload Image</button>
+                <button id="upload-btn" class="secondary-btn">Upload Your Photo</button>
                 <div id="image-preview" class="image-preview"></div>
             </div>
 
-            <div id="loader" class="loader" style="display: none;">Analyzing...</div>
+            <div id="loader" class="loader" style="display: none;">AI is analyzing your features...</div>
             <div id="result-container" class="result-container" style="display: none;">
                 <h3 id="result-label"></h3>
                 <div id="label-container"></div>
             </div>
-        </div>
+            <div class="content-text">
+                <h3>How it works</h3>
+                <p>We use Google's Teachable Machine technology to compare your facial structure with thousands of images of dogs and cats. This tool is for entertainment purposes only and does not store your private photos.</p>
+            </div>
+        </section>
 
-        <div class="container">
-            <h1>Lotto Number Generator</h1>
-            <button id="generate">Generate Numbers</button>
+        <section id="lotto-gen" class="container">
+            <h1>Lucky Lotto Number Generator</h1>
+            <p class="section-desc">Need some inspiration for your next lottery ticket? Our generator provides 6 random, unique numbers between 1 and 45, perfectly sorted for your convenience.</p>
+            <button id="generate">Generate Lucky Numbers</button>
             <div id="numbers"></div>
-        </div>
+            <div class="content-text">
+                <h3>Fairness & Randomness</h3>
+                <p>Our algorithm uses a cryptographically secure random number generator to ensure each draw is completely unbiased. Good luck with your picks!</p>
+            </div>
+        </section>
 
-        <div class="container contact-container">
-            <h2>Partnership Inquiry</h2>
+        <section id="contact" class="container contact-container">
+            <h2>Partnership & Support</h2>
+            <p class="section-desc">Have questions or want to collaborate? Feel free to send us a message through the form below.</p>
             <form action="https://formspree.io/f/xqejardn" method="POST">
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="email" placeholder="Your Email Address" required>
                 </div>
                 <div class="form-group">
-                    <textarea name="message" placeholder="Inquiry Details" required></textarea>
+                    <textarea name="message" placeholder="How can we help you?" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
-        </div>
+        </section>
 
-        <div class="container comment-container">
+        <section class="container comment-container">
+            <h2>Community Comments</h2>
             <div id="disqus_thread"></div>
             <script>
                 (function() {
@@ -61,8 +84,17 @@
                 (d.head || d.body).appendChild(s);
                 })();
             </script>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Fun AI Tools. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
         </div>
-    </div>
+    </footer>
     <script src="main.js"></script>
 </body>
-</html>11
+</html>
